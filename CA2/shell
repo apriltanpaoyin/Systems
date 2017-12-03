@@ -1,0 +1,10 @@
+# /etc/shells: valid login shells
+/bin/sh
+/bin/dash
+/bin/bash
+/bin/rbash
+/usr/bin/tmux
+/usr/bin/screen
+
+# LINES ADDED BY APRIL
+/bin/false
