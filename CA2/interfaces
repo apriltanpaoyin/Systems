@@ -1,0 +1,37 @@
+# This file describes the network interfaces available on your system
+# and how to activate them. For more information, see interfaces(5).
+
+# The loopback network interface
+auto lo
+iface lo inet loopback
+
+# The primary network interface
+auto eth0
+iface eth0 inet dhcp
+
+#auto eth1
+#iface eth1 inet static
+#       address 192.168.1.13
+#       netmask 255.255.255.0
+#       network 192.168.1.0
+#       broadcast 192.168.1.255
+#       post-up route add -net 192.168.0.0 netmask 255.255.0.0 gw 192.168.1.1
+#dev eth1
+#       pre-down route del -net 192.168.0.0 netmask 255.255.0.0 gw 192.168.1.1
+#dev eth1
+
+auto eth2
+iface eth2 inet static
+        address 192.168.2.2
+        netmask 255.255.255.0
+        network 192.168.2.0
+        broadcast 192.168.2.255
+        post-up route add -net 192.168.0.0 netmask 255.255.0.0 gw 192.168.2.2
+dev eth2
+        pre-down route del -net 192.168.0.0 netmask 255.255.0.0 gw 192.168.2.2
+dev eth2
+
+# LINES ADDED BY APRIL FOR DHCP CLIENT
+auto lo eth1
+iface eth1 inet dhcp
+iface lo inet loopback
